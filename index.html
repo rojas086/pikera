@@ -1,1 +1,20 @@
-<h1> hola mundo</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pikera - Servicio Web</title>
+</head>
+<body>
+  <h1>Bienvenido al Servicio Web de Piquera</h1>
+  <button id="fetchData">Obtener Datos</button>
+  <script>
+    document.getElementById('fetchData').addEventListener('click', () => {
+      fetch('http://localhost:3000/api/data')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    });
+  </script>
+</body>
+</html>
+Con esta configuración
